@@ -12,6 +12,7 @@ We use [[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)] and [[SUN397
 ```
 python create_celeba_npz.py
 ``` 
+Files for training and test with SUN397 can be generated similarly.
 
 # Run experiments
 Some important arguments for our main script are:
