@@ -4,7 +4,7 @@ import numpy as np
 
 from PIL import Image
 from random import sample
-from os import listdir
+from os import listdir, mkdir
 from os.path import exists, isfile, join
 
 
@@ -16,7 +16,9 @@ def load_image_path(dataset_root, subset):
 
 
 def train_val_test_npz():
-    dataset_root = './CelebA'   #/path/to/your/CelebA/
+    dataset_root = './data/CelebA'   #/path/to/your/CelebA/
+    if 'numpy' not in listdir(dataset_root):
+        mkdir(dataset_root+'/numpy')  
     subsets = ['train', 'val', 'test']
     image_size = [64, 64]
     for subset in subsets:
