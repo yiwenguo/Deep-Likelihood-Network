@@ -8,7 +8,7 @@ This is a TensorFlow implementation of deep likelihood network for image restora
 * scikit-image
 
 # Prepare Data
-We use [[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)] and [[SUN397](https://groups.csail.mit.edu/vision/SUN/)] in the image inpainting and interpolation experiments. For CelebA, the aligned images are used and the first 100,000 images sorted automatically by `os.listdir(path)` is used for training. If the training, validation, and test images are stored at `./data/CelebA/train/images`, `./data/CelebA/val/images`, and `./data/CelebA/test/images`, respectively, then simply run the python script to generate .npz files:
+We use [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and [SUN397](https://groups.csail.mit.edu/vision/SUN/) in the image inpainting and interpolation experiments. For CelebA, the aligned images are used and the first 100,000 images sorted automatically by `os.listdir(path)` is used for training. If the training, validation, and test images are stored at `./data/CelebA/train/images`, `./data/CelebA/val/images`, and `./data/CelebA/test/images`, respectively, then simply run the python script to generate .npz files:
 ```
 python create_celeba_npz.py
 ``` 
@@ -37,6 +37,11 @@ python train_inpaint.py \
 --k 1
 ```
 Pretrained models used in our experiments can be downloaded at:
+
+[CelebA pretrained inpainting model](https://drive.google.com/open?id=1Udu4dB_YFF2MscfrcbfWeQ1HxoMY7HUs) \
+[CelebA pretrained interpolation model]() \
+[SUN397 pretrained interpolation model]() \
+[SUN397 pretrained interpolation model]()
 
 # Citation and contact
 Please cite our work in your publications if it helps your research:
