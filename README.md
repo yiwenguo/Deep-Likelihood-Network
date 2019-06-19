@@ -12,7 +12,7 @@ We use [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and [SUN397](h
 ```
 python create_celeba_npz.py
 ``` 
-Files for training and test with SUN397 can be generated similarly.
+Files for training and test with SUN397 can be generated similarly, and the path to the .npz files should be passed to the argument `--data_path` of `train_*.py`.
 
 # Run experiments
 Some important arguments for our main script are:
@@ -25,15 +25,15 @@ Some important arguments for our main script are:
 An example of training image inpainting autoencoder using our DL-Net:
 ```
 python train_inpaint.py \
-./path/to/your/pretrained/model/ \
-./path/to/your/data/ \
+--model_path ./path/to/your/pretrained/model/ \
+--data_path ./path/to/your/data/ \
 --k 5
 ```
 With k=1, it boils down to the ridgt-joint training as explained:
 ```
 python train_inpaint.py \
-./path/to/your/pretrained/model/ \
-./path/to/your/data/ \
+--model_path ./path/to/your/pretrained/model/ \
+--data_path ./path/to/your/data/ \
 --k 1
 ```
 Pretrained models used in our experiments can be downloaded at:
