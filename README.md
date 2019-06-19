@@ -40,10 +40,10 @@ Pretrained models used in our experiments can be downloaded at:
 
 [CelebA pretrained inpainting model](https://drive.google.com/open?id=1Udu4dB_YFF2MscfrcbfWeQ1HxoMY7HUs) \
 [CelebA pretrained interpolation model](https://drive.google.com/open?id=1rqvW3EAhocIpxLRfJQON4XFU89mWf3S0) \
-[SUN397 pretrained inpainting model]() \
-[SUN397 pretrained interpolation model]()
+[SUN397 pretrained inpainting model](https://drive.google.com/open?id=1LkWpkQMmL4UW21ztpXncZo_nvnfVl2VD) \
+[SUN397 pretrained interpolation model](https://drive.google.com/open?id=1Ly3a_OhmnOaqXP3rXmD5XhC9VCBqzEdq)
 
-These models are trained to process images under one specific degradation level. You can put them in any directory you perfer and pass it to the argument `--model_path` of `train_*.py`.
+These models are trained to process images under one specific degradation level. You can put them in any directory you perfer and pass its path to the argument `--model_path` of `train_*.py`.
 
 # Citation and contact
 Please cite our work in your publications if it helps your research:
