@@ -8,7 +8,7 @@ This is a TensorFlow implementation of deep likelihood network for image restora
 * scikit-image
 
 # Prepare Data
-We use [[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)] and [[SUN397](https://groups.csail.mit.edu/vision/SUN/)] in the image inpainting and interpolation experiments. For CelebA, the aligned images are used and the first 100,000 images sorted automatically by `os.listdir(path)` is used for training. If your training, validation and test images are stored at `./data/CelebA/train/images`, `./data/CelebA/val/images`, and `./data/CelebA/test/images`, respectively, then run the provided python script to generate .npz files at `./data/CelebA/numpy':
+We use [[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)] and [[SUN397](https://groups.csail.mit.edu/vision/SUN/)] in the image inpainting and interpolation experiments. For CelebA, the aligned images are used and the first 100,000 images sorted automatically by `os.listdir(path)` is used for training. If your training, validation and test images are stored at `./data/CelebA/train/images`, `./data/CelebA/val/images`, and `./data/CelebA/test/images`, respectively, then you can run the provided python script to generate .npz files at `./data/CelebA/numpy`:
 ```
 python create_celeba_npz.py
 ``` 
