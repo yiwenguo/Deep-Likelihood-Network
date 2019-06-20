@@ -15,10 +15,11 @@ python create_celeba_npz.py
 Files for training and test with SUN397 can be generated similarly, and the path to the .npz files should be passed to the argument `--data_path` of `train_*.py`.
 
 # Run experiments
-Some important arguments for our main script are:
+Some important arguments for our training scripts are:
 * `--k`: Number of gradient descent iterations for updating z, i.e., k.
 * `--model_path`: Directory of your pre-trained model.
 * `--data_path`: Directory of your npz data.
+* `--from_scratch`: Whether to train from scatch (default false).
 * `--learning_rate`: Initial learning rate (optional).
 * `--max_epoch`: Number of training epochs (optional).
 
@@ -43,7 +44,19 @@ Pretrained models used in our experiments can be downloaded at:
 [SUN397 pretrained inpainting model](https://drive.google.com/open?id=1LkWpkQMmL4UW21ztpXncZo_nvnfVl2VD) \
 [SUN397 pretrained interpolation model](https://drive.google.com/open?id=1Ly3a_OhmnOaqXP3rXmD5XhC9VCBqzEdq)
 
-These models are trained to process images under one specific degradation level. You can put them in any directory you perfer and pass its path to the argument `--model_path` of `train_*.py`.
+These models are trained to process images under one specific degradation level. You can put them in any directory you prefer and pass its path to the argument `--model_path` of `train_*.py`. Notably, our DL-Net can also be trained from scratch, for examply by simply running:
+```
+python train_inpaint.py \
+--data_path ./path/to/your/data/ \
+--from_scratch \
+--k 5
+```
+Test is performed by running another python script. An example of testing our DL-Net flavoured image inpainting autoencoder:
+```
+python test_inpaint.py \
+--resume_path ./path/to/your/DL-NET/ckts/ \
+--k 5
+```
 
 # Citation and contact
 Please cite our work in your publications if it helps your research:
