@@ -26,21 +26,21 @@ Some important arguments for our training scripts are:
 An example of training image inpainting autoencoder using our DL-Net:
 ```
 python train_inpaint.py \
---model_path ./path/to/your/pretrained/model/ \
+--model_path ./path/to/your/pretrained/ckts/ \
 --data_path ./path/to/your/data/ \
 --k 5
 ```
 With k=1, it boils down to the ridgt-joint training as explained:
 ```
 python train_inpaint.py \
---model_path ./path/to/your/pretrained/model/ \
+--model_path ./path/to/your/pretrained/ckts/ \
 --data_path ./path/to/your/data/ \
 --k 1
 ```
 Pretrained models used in our experiments can be downloaded at:
 
 [CelebA pretrained inpainting model](https://drive.google.com/open?id=1Udu4dB_YFF2MscfrcbfWeQ1HxoMY7HUs) \
-[CelebA pretrained interpolation model](https://drive.google.com/open?id=1rqvW3EAhocIpxLRfJQON4XFU89mWf3S0) \
+[CelebA pretrained interpolation model](https://drive.google.com/open?id=1PprwJjb-fdJWJrzJWjxf-fKXNbMIy-Gd) \
 [SUN397 pretrained inpainting model](https://drive.google.com/open?id=1LkWpkQMmL4UW21ztpXncZo_nvnfVl2VD) \
 [SUN397 pretrained interpolation model](https://drive.google.com/open?id=1Ly3a_OhmnOaqXP3rXmD5XhC9VCBqzEdq)
 
