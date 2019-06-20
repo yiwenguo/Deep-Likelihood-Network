@@ -37,7 +37,9 @@ def get_batch(images, batch_k, batch_size):
 
 def main(args):
     
-    environ['CUDA_VISIBLE_DEVICES']='0'
+    # environ['CUDA_VISIBLE_DEVICES']=''
+    if args.model_path is not None and args.from_scratch:
+        print ('Sure you want to train from scratch?')
 
     # Collect datafiles and setup training model
     filenames, test_filenames = collect_datafiles(args.data_path)
@@ -88,9 +90,10 @@ def main(args):
         sess.run(tf.global_variables_initializer())
 
         # Load pre-trained model for a single degradation setting
-        pretrained_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='net_')
-        pre_saver = tf.train.Saver(pretrained_vars)
-        pre_saver.restore(sess, join(args.model_path, 'model.ckpt'))          
+        if args.from_scratch is False:
+            pretrained_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='net_')
+            pre_saver = tf.train.Saver(pretrained_vars)
+            pre_saver.restore(sess, join(args.model_path, 'model.ckpt'))          
 
         saver = tf.train.Saver()
         coord = tf.train.Coordinator()
@@ -177,11 +180,13 @@ def parse_arguments(argv):
         help='Learning rate decay rate', default=1e-1)
     parser.add_argument('--momentum', type=float, 
         help='Solver momentum', default=0.9)
+    parser.add_argument('--from_scratch', 
+        help='Let deep likelihood net being trained from scratch.', action='store_true')
 
     parser.add_argument('--model_path', type=str,
-        help='Directory for your pretrained model.', default='./model/')  #'./pre_trained/ckts') 
+        help='Directory for your pretrained model.', default=None)  #'./pre_trained/ckts') 
     parser.add_argument('--data_path', type=str,
-        help='Directory for training and test data.', default='../Data/CelebA/numpy/')
+        help='Directory for training and test data.', default='./data/CelebA/numpy/')
     parser.add_argument('--ckt_dir', type=str,
         help='Directory for ckt files.', default='ckts')
 
