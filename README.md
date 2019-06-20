@@ -40,9 +40,9 @@ python train_inpaint.py \
 Pretrained models used in our experiments can be downloaded at:
 
 [CelebA pretrained inpainting model](https://drive.google.com/open?id=1Udu4dB_YFF2MscfrcbfWeQ1HxoMY7HUs) \
-[CelebA pretrained interpolation model](https://drive.google.com/open?id=1PprwJjb-fdJWJrzJWjxf-fKXNbMIy-Gd) \
-[SUN397 pretrained inpainting model](https://drive.google.com/open?id=1LkWpkQMmL4UW21ztpXncZo_nvnfVl2VD) \
-[SUN397 pretrained interpolation model](https://drive.google.com/open?id=1Ly3a_OhmnOaqXP3rXmD5XhC9VCBqzEdq)
+[CelebA pretrained interpolation model](https://drive.google.com/open?id=1o0Ar5K_m6shq40IOICNwl5D2EYfxXngW) \
+[SUN397 pretrained inpainting model](https://drive.google.com/open?id=17dm7v89Q82Lo2pAlPJr130ZyoVyrmv5s) \
+[SUN397 pretrained interpolation model](https://drive.google.com/open?id=1ZB1C8zjE8WjT-YcTLBqGxfJ2kiMaseZg)
 
 These models are trained to process images under one specific degradation level. You can put them in any directory you prefer and pass its path to the argument `--model_path` of `train_*.py`. Notably, our DL-Net can also be trained from scratch, for examply by simply running:
 ```
