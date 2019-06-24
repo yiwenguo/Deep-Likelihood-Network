@@ -92,7 +92,7 @@ def main(args):
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
     
-    parser.add_argument('k', type=int,
+    parser.add_argument('--k', type=int,
         help='Number of gradient descent steps for updating z.', default=5)    
     parser.add_argument('--max_epoch', type=int,
         help='Number of training epochs.', default=500)
