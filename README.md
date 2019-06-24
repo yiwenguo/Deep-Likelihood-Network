@@ -40,9 +40,9 @@ python train_inpaint.py \
 Pretrained models used in our experiments can be downloaded at:
 
 [CelebA pretrained inpainting model](https://drive.google.com/open?id=1Udu4dB_YFF2MscfrcbfWeQ1HxoMY7HUs) \
-[CelebA pretrained interpolation model](https://drive.google.com/open?id=1o0Ar5K_m6shq40IOICNwl5D2EYfxXngW) \
-[SUN397 pretrained inpainting model](https://drive.google.com/open?id=17dm7v89Q82Lo2pAlPJr130ZyoVyrmv5s) \
-[SUN397 pretrained interpolation model](https://drive.google.com/open?id=1ZB1C8zjE8WjT-YcTLBqGxfJ2kiMaseZg)
+[CelebA pretrained interpolation model](https://drive.google.com/open?id=1UwBxo7tdxIUfNhmf22iihzEoyTmsHX8X) \
+[SUN397 pretrained inpainting model](https://drive.google.com/open?id=1xzMgAkhSNCvYXSdKbWLDAlzHIiAe-bxP) \
+[SUN397 pretrained interpolation model](https://drive.google.com/open?id=1yWt-zyUS3uSMrGGaWl82dzXxsG_4BGyO)
 
 These models are trained to process images under one specific degradation level. You can put them in any directory you prefer and pass its path to the argument `--model_path` of `train_*.py`. Notably, our DL-Net can also be trained from scratch, for examply by simply running:
 ```
@@ -57,8 +57,9 @@ python test_inpaint.py \
 --resume_path ./path/to/your/DL-NET/ckts/ \
 --k 5
 ```
+Scripts for training and testing image interpolation DL-Net models are also provided. For SISR, the core [block of code](https://github.com/yiwenguo/Deep-Likelihood-Network/blob/74561ce6d667107ef822d61280751924233231db/network_model.py#L211) is similar. If you have any question regarding this problem, contact me at yiwen.guo@intel.com.
 
-# Citation and contact
+# Citation
 Please cite our work in your publications if it helps your research:
 ```
 @article{guo2019deep,
