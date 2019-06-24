@@ -51,7 +51,7 @@ python train_inpaint.py \
 --from_scratch \
 --k 5
 ```
-Test is performed by running another python script. An example of testing our DL-Net flavoured image inpainting autoencoder:
+Test is performed by running another python script. A basic example of testing our DL-Net flavoured image inpainting autoencoder:
 ```
 python test_inpaint.py \
 --resume_path ./path/to/your/DL-NET/ckts/ \
