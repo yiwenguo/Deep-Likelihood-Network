@@ -57,7 +57,7 @@ python test_inpaint.py \
 --resume_path ./path/to/your/DL-NET/ckts/ \
 --k 5
 ```
-Scripts for training and testing image interpolation DL-Net models are also provided. For SISR, the core [block of code](https://github.com/yiwenguo/Deep-Likelihood-Network/blob/74561ce6d667107ef822d61280751924233231db/network_model.py#L211) is similar. If you have any question regarding this problem, contact me at yiwen.guo@intel.com.
+Scripts for training and testing image interpolation DL-Net models are also provided. For SISR, the core [block of code](https://github.com/yiwenguo/Deep-Likelihood-Network/blob/74561ce6d667107ef822d61280751924233231db/network_model.py#L211) is similar. Training and test data is organized and generated following [SRCNN](http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html). If you have any question regarding this task, contact me at yiwen.guo@intel.com.
 
 # Citation
 Please cite our work in your publications if it helps your research:
