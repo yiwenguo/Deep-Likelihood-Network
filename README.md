@@ -12,7 +12,7 @@ We use [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) and [SUN397](h
 ```
 python create_celeba_npz.py
 ``` 
-Files for training and test with SUN397 can be generated similarly, and the path to the .npz files should be passed to the argument `--data_path` of `train_*.py`.
+Files for training and test with SUN397 can be generated similarly, and the path to the .npz files should be passed to the argument `--data_path` of `train_*.py` for running experiments.
 
 # Run experiments
 Some important arguments for our training scripts are:
