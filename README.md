@@ -63,10 +63,10 @@ Scripts for training and testing image interpolation DL-Net models are also prov
 Please cite our work in your publications if it helps your research:
 ```
 @article{guo2019deep,
-  title={Deep Likelihood Network for Image Restoration with Multiple Degradations},
-  author={Guo, Yiwen and Zuo, Wangmeng and Zhang, Changshui and Chen, Yurong},
-  journal={arXiv preprint arXiv:1904.09105},
-  year={2019}
+  title={Deep Likelihood Network for Image Restoration with Multiple Degradation Levels},
+  author={Guo, Yiwen and Lu, Ming and Zuo, Wangmeng and Zhang, Changshui and Chen, Yurong},
+  journal={IEEE Transactions on Image Processing},
+  year={2021}
 }
 ```
 
